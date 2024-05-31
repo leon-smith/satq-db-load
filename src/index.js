@@ -29,7 +29,7 @@ app.use('/satq-load-api', satqLoadRoutes);
 // test route 
 app.get('/', (req, res) => {res.send( 
     // using new response class
-    new Response(HttpStatus.OK.code, HttpStatus.OK.status, 'Patient API, v1.0.0 - All Systems Go', {
+    new Response(HttpStatus.OK.code, HttpStatus.OK.status, 'Security Awareness Training and Questions API, v1.0.0 - All Systems Go', {
         questions: { "question": {
                 "id": 1,
                 "topic_id": "Test",
