@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS question (
     content  VARCHAR(255) DEFAULT NULL,
     PRIMARY KEY (id, topic_id),
     FOREIGN KEY (topic_id) REFERENCES topic (id),
-    FOREIGN KEY (sub_topic_id) REFERENCES topic (id),
+    FOREIGN KEY (sub_topic_id) REFERENCES sub_topic (id),
     CONSTRAINT UQ_Question_Content UNIQUE(content)
 );
 

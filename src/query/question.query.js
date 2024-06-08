@@ -1,8 +1,8 @@
 const QUESTION_QUERY = {
-    SELECT_QUESTIONS: 'SELECT * FROM question ORDER BY topic_id DESC LIMIT 100',
-    SELECT_QUESTION:  'SELECT * FROM question WHERE id = ? and topic_id = ?',
-    CREATE_QUESTION:  'INSERT INTO question(topic_id, content)' + 'VALUES (?,?)',
-    UPDATE_QUESTION:   'UPDATE question SET topic_id = ?, content = ?',
+    SELECT_QUESTIONS: 'SELECT * FROM question ORDER BY id DESC LIMIT 100',
+    SELECT_QUESTION:  'SELECT * FROM question WHERE id = ?',
+    CREATE_QUESTION:  'INSERT INTO question(topic_id, sub_topic_id, content)' + 'VALUES (?,?,?)',
+    UPDATE_QUESTION:   'UPDATE question SET content = ? WHERE id = ?',
     DELETE_QUESTIONS:  'DELETE FROM question WHERE id = ?'                 
 };
 
