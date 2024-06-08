@@ -8,6 +8,15 @@ CREATE TABLE IF NOT EXISTS topic (
     PRIMARY KEY (id)
 );
 
+/* Add sub-topic table */
+CREATE TABLE IF NOT EXISTS sub_topic (
+    id      BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    topic_id BIGINT UNSIGNED,
+    name    VARCHAR(255) DEFAULT NULL,
+    PRIMARY KEY (id, topic_id),
+    FOREIGN KEY(topic_id) REFERENCES topic(id)
+);
+
 CREATE TABLE IF NOT EXISTS content_metadata (
     id            BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     topic_id      BIGINT UNSIGNED,
@@ -48,9 +57,11 @@ CREATE TABLE IF NOT EXISTS training_video (
 CREATE TABLE IF NOT EXISTS question (
     id       BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     topic_id BIGINT UNSIGNED,
+    sub_topic_id BIGINT UNSIGNED,
     content  VARCHAR(255) DEFAULT NULL,
     PRIMARY KEY (id, topic_id),
     FOREIGN KEY (topic_id) REFERENCES topic (id),
+    FOREIGN KEY (sub_topic_id) REFERENCES topic (id),
     CONSTRAINT UQ_Question_Content UNIQUE(content)
 );
 
