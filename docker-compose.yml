@@ -1,0 +1,27 @@
+services:
+  nodeapp:
+    container_name: nodeappcontainer
+    build: .
+    image: nodeapp:v1
+    volumes:
+      - $HOME/nodeapp:/code
+    ports:
+      - 3000:3000
+    expose:
+      - 3000
+    environment:
+      SERVICE_TAGS: dev
+      SERVICE_NAME: nodeappservice
+      SERVER_PORT : 3000
+      DB_HOST: local
+      DB_PORT: 3306
+      DB_USER: 'root'
+      DB_PASSWORD: 'LetmeIn'
+      DB_NAME: satqdb
+      DB_CONNECTION_LIMIT: 20
+    networks:
+      - internalnet
+
+networks:
+  internalnet:
+    driver: bridge

@@ -238,19 +238,19 @@ function determineTableQuery(requestUri, apiMethod) {
         case "training_video":
             switch(apiMethod.toLowerCase()) {
                 case "allitems":
-                    QUERY = TRAINING_VIDEO_QUERY.SELECT_TRAINING_VIDEOS;
+                    QUERY = TRAINING_VIDEO.SELECT_TRAINING_VIDEOS;
                     break;
                 case "get":
-                    QUERY = TRAINING_VIDEO_QUERY.SELECT_TRAINING_VIDEO;
+                    QUERY = TRAINING_VIDEO.SELECT_TRAINING_VIDEO;
                     break;
                 case "post":
-                    QUERY = TRAINING_VIDEO_QUERY.CREATE_TRAINING_VIDEO;
+                    QUERY = TRAINING_VIDEO.CREATE_TRAINING_VIDEO;
                     break;
                 case "put":
-                    QUERY = TRAINING_VIDEO_QUERY.UPDATE_TRAINING_VIDEO;
+                    QUERY = TRAINING_VIDEO.UPDATE_TRAINING_VIDEO;
                     break;
                 case "delete":
-                    QUERY = TRAINING_VIDEO_QUERY.DELETE_TRAINING_VIDEOS;
+                    QUERY = TRAINING_VIDEO.DELETE_TRAINING_VIDEOS;
                     break;
                 default:
                     QUERY = "";
@@ -259,19 +259,19 @@ function determineTableQuery(requestUri, apiMethod) {
         case "training_doc":
             switch(apiMethod.toLowerCase()) {
                 case "allitems":
-                    QUERY = TRAINING_DOC_QUERY.SELECT_TRAINING_DOCS;
+                    QUERY = TRAINING_DOC.SELECT_TRAINING_DOCS;
                     break;
                 case "get":
-                    QUERY = TRAINING_DOC_QUERY.SELECT_TRAINING_DOC;
+                    QUERY = TRAINING_DOC.SELECT_TRAINING_DOC;
                     break;
                 case "post":
-                    QUERY = TRAINING_DOC_QUERY.CREATE_TRAINING_DOC;
+                    QUERY = TRAINING_DOC.CREATE_TRAINING_DOC;
                     break;
                 case "put":
-                    QUERY = TRAINING_DOC_QUERY.UPDATE_TRAINING_DOC;
+                    QUERY = TRAINING_DOC.UPDATE_TRAINING_DOC;
                     break;
                 case "delete":
-                    QUERY = TRAINING_DOC_QUERY.DELETE_TRAINING_DOCS;
+                    QUERY = TRAINING_DOC.DELETE_TRAINING_DOCS;
                     break;
                 default:
                     QUERY = "";
@@ -280,19 +280,19 @@ function determineTableQuery(requestUri, apiMethod) {
         case "training_image":
             switch(apiMethod.toLowerCase()) {
                 case "allitems":
-                    QUERY = TRAINING_IMAGE_QUERY.SELECT_TRAINING_IMAGES;
+                    QUERY = TRAINING_IMAGE.SELECT_TRAINING_IMAGES;
                     break;
                 case "get":
-                    QUERY = TRAINING_IMAGE_QUERY.SELECT_TRAINING_IMAGE;
+                    QUERY = TRAINING_IMAGE.SELECT_TRAINING_IMAGE;
                     break;
                 case "post":
-                    QUERY = TRAINING_IMAGE_QUERY.CREATE_TRAINING_IMAGE;
+                    QUERY = TRAINING_IMAGE.CREATE_TRAINING_IMAGE;
                     break;
                 case "put":
-                    QUERY = TRAINING_IMAGE_QUERY.UPDATE_TRAINING_IMAGE;
+                    QUERY = TRAINING_IMAGE.UPDATE_TRAINING_IMAGE;
                     break;
                 case "delete":
-                    QUERY = TRAINING_IMAGE_QUERY.DELETE_TRAINING_IMAGES;
+                    QUERY = TRAINING_IMAGE.DELETE_TRAINING_IMAGES;
                     break;
                 default:
                     QUERY = "";
@@ -301,19 +301,19 @@ function determineTableQuery(requestUri, apiMethod) {
         case "content_metadata":
             switch(apiMethod.toLowerCase()) {
                 case "allitems":
-                    QUERY = CONTENT_METADATA_QUERY.SELECT_CONTENT_METADATAS;
+                    QUERY = CONTENT_METADATA.SELECT_CONTENT_METADATAS;
                     break;
                 case "get":
-                    QUERY = CONTENT_METADATA_QUERY.SELECT_CONTENT_METADATA;
+                    QUERY = CONTENT_METADATA.SELECT_CONTENT_METADATA;
                     break;
                 case "post":
-                    QUERY = CONTENT_METADATA_QUERY.CREATE_CONTENT_METADATA;
+                    QUERY = CONTENT_METADATA.CREATE_CONTENT_METADATA;
                     break;
                 case "put":
-                    QUERY = CONTENT_METADATA_QUERY.UPDATE_CONTENT_METADATA;
+                    QUERY = CONTENT_METADATA.UPDATE_CONTENT_METADATA;
                     break;
                 case "delete":
-                    QUERY = CONTENT_METADATA_QUERY.DELETE_CONTENT_METADATAS;
+                    QUERY = CONTENT_METADATA.DELETE_CONTENT_METADATAS;
                     break;
                 default:
                     QUERY = "";
